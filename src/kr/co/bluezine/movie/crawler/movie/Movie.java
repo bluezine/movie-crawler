@@ -2,6 +2,8 @@ package kr.co.bluezine.movie.crawler.movie;
 
 import java.util.List;
 
+import org.json.JSONObject;
+
 /**
  * Movie bean
  * 
@@ -130,4 +132,8 @@ public class Movie {
 		this.desc = desc;
 	}
 
+	@Override
+	public String toString() {
+		return new JSONObject(this).toString(2);
+	}
 }
